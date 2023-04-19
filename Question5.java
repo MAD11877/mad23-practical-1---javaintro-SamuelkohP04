@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Question5
 {
@@ -25,8 +27,18 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
+    ArrayList <Integer> data = new ArrayList<>();
     Scanner in = new Scanner(System.in);
-    
+    int num = in.nextInt();
+
+    if (num > 0) {
+      for (int i = 0; i < num; i++) {
+        int n = in.nextInt();
+        data.add(n);
+      }
+    }
+    in.close();
+    System.out.println(Collections.max(data));
+
   }
 }
